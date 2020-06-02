@@ -1,0 +1,16 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "NovoPitanje.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+void refresh(_di_IXMLpitanjaType pitanja){
+
+
+   F_NovoPitanje->ListView1->Items->Clear();
+
+
+}

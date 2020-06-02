@@ -1,0 +1,63 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "EditPitanja.h"
+#include "pitanja.h"
+#include "operacijePitanja.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TF_EditPitanje *F_EditPitanje;
+//---------------------------------------------------------------------------
+__fastcall TF_EditPitanje::TF_EditPitanje(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TF_EditPitanje::Button1Click(TObject *Sender)
+{
+	_di_IXMLpitanjaType pitanja = Getpitanja(XMLDocument1);
+
+	loadPitanja(pitanja);
+
+}
+
+//---------------------------------------------------------------------------
+void __fastcall TF_EditPitanje::Button2Click(TObject *Sender)
+{
+	_di_IXMLpitanjaType pitanja = Getpitanja(XMLDocument1);
+	ListView1->Items->Clear();
+
+	for(int i = 0; i<pitanja->Count;i++){
+		ListView1->Items->Add();
+		ListView1->Items->Item[i]->Caption = pitanja->pitanje[i]->Get_pit();
+		ListView1->Items->Item[i]->SubItems->Add(pitanja->pitanje[i]->Get_odg1());
+		ListView1->Items->Item[i]->SubItems->Add(pitanja->pitanje[i]->Get_odg2());
+		ListView1->Items->Item[i]->SubItems->Add(pitanja->pitanje[i]->Get_odg3());
+
+	}
+
+
+
+}
+//---------------------------------------------------------------------------
+void __fastcall TF_EditPitanje::Button4Click(TObject *Sender)
+{
+	_di_IXMLpitanjaType pitanja = Getpitanja(XMLDocument1);
+
+	savePitanja(pitanja);
+}
+//---------------------------------------------------------------------------
+void __fastcall TF_EditPitanje::Button3Click(TObject *Sender)
+{
+	_di_IXMLpitanjaType pitanja = Getpitanja(XMLDocument1);
+
+	deletePitanja(pitanja);
+
+
+
+}
+//---------------------------------------------------------------------------
+

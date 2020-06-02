@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/05/25 23:53:12.000.915,C:\Users\elbet\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\elbet\Documents\Embarcadero\Studio\Projects\Operacije.cbproj</Transaction>
+    <Transaction>2020/05/25 23:53:25.000.000,=C:\Users\elbet\Desktop\Projekt\Dll\Unit1.cpp</Transaction>
+    <Transaction>2020/05/25 23:53:36.000.936,C:\Users\elbet\Desktop\Projekt\Dll\Unit1.cpp=</Transaction>
+    <Transaction>2020/05/25 23:53:42.000.692,=C:\Users\elbet\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>2020/05/25 23:54:12.000.373,C:\Users\elbet\Documents\Embarcadero\Studio\Projects\Unit2.cpp=C:\Users\elbet\Documents\Embarcadero\Studio\Projects\operacijePitanja.cpp</Transaction>
+    <Transaction>2020/05/25 23:54:12.000.373,C:\Users\elbet\Documents\Embarcadero\Studio\Projects\Unit2.h=C:\Users\elbet\Documents\Embarcadero\Studio\Projects\operacijePitanja.h</Transaction>
+    <Transaction>2020/05/25 23:56:24.000.539,C:\Users\elbet\Documents\Embarcadero\Studio\Projects\operacijePitanja.cpp=C:\Users\elbet\Desktop\Projekt\Lib\operacijePitanja.cpp</Transaction>
+    <Transaction>2020/05/25 23:56:24.000.539,C:\Users\elbet\Documents\Embarcadero\Studio\Projects\operacijePitanja.h=C:\Users\elbet\Desktop\Projekt\Lib\operacijePitanja.h</Transaction>
+    <Transaction>2020/05/25 23:56:26.000.439,C:\Users\elbet\Documents\Embarcadero\Studio\Projects\Operacije.cbproj=C:\Users\elbet\Desktop\Projekt\Lib\Operacije.cbproj</Transaction>
+    <Transaction>2020/05/27 13:55:18.000.451,=C:\Users\elbet\Desktop\Projekt\Lib\Unit1.cpp</Transaction>
+    <Transaction>2020/05/27 13:55:31.000.987,C:\Users\elbet\Desktop\Projekt\Lib\Unit1.h=C:\Users\elbet\Desktop\Projekt\Lib\operacijeUser.h</Transaction>
+    <Transaction>2020/05/27 13:55:31.000.987,C:\Users\elbet\Desktop\Projekt\Lib\Unit1.cpp=C:\Users\elbet\Desktop\Projekt\Lib\operacijeUser.cpp</Transaction>
+    <Transaction>2020/05/27 23:06:31.000.938,=C:\Users\elbet\Desktop\Projekt\App\User.cpp</Transaction>
+    <Transaction>2020/05/27 23:10:05.000.611,C:\Users\elbet\Desktop\Projekt\App\User.cpp=</Transaction>
+    <Transaction>2020/05/29 23:37:10.000.804,=C:\Users\elbet\Desktop\Projekt\App\Info.cpp</Transaction>
+    <Transaction>2020/05/29 23:50:02.000.360,=C:\Users\elbet\Desktop\Projekt\Dll\Reg.cpp</Transaction>
+    <Transaction>2020/05/29 23:56:35.000.180,C:\Users\elbet\Desktop\Projekt\App\Info.cpp=</Transaction>
+    <Transaction>2020/05/29 23:56:42.000.800,C:\Users\elbet\Desktop\Projekt\Dll\Reg.cpp=</Transaction>
+    <Transaction>2020/05/30 00:15:51.000.295,=C:\Users\elbet\Desktop\Projekt\App\Info.cpp</Transaction>
+    <Transaction>2020/05/30 22:28:24.015,=C:\Users\elbet\Desktop\Projekt\Lib\scoreboard.cpp</Transaction>
+    <Transaction>2020/05/30 22:31:00.128,C:\Users\elbet\Desktop\Projekt\Lib\scoreboard.cpp=</Transaction>
+    <Transaction>2020/05/30 22:33:07.361,=C:\Users\elbet\Desktop\Projekt\Lib\scoreboard.cpp</Transaction>
+    <Transaction>2020/05/30 22:33:25.280,C:\Users\elbet\Desktop\Projekt\Lib\scoreboard.cpp=</Transaction>
+    <Transaction>2020/05/30 23:38:39.071,C:\Users\elbet\Desktop\Projekt\App\Info.cpp=</Transaction>
+  </Transactions>
+</BorlandProject>

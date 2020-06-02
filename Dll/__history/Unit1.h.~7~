@@ -1,0 +1,11 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit1H
+#define Unit1H
+#include <vcl.h>
+#include "pitanja.h"
+//---------------------------------------------------------------------------
+#endif
+
+
+void refresh(_di_IXMLpitanjaType pitanja, ListView * lista);

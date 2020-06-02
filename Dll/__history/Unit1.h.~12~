@@ -1,0 +1,14 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit1H
+#define Unit1H
+#include <vcl.h>
+#include "pitanja.h"
+
+using namespace std;
+//---------------------------------------------------------------------------
+#endif
+
+
+void refresh(_di_IXMLpitanjaType pitanja);
+void add (_di_IXMLpitanjaType pitanja);

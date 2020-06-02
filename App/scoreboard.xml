@@ -1,0 +1,14 @@
+<games>
+	<game>
+		<username>user1</username>
+		<score>3500</score>
+		<offer>srednja</offer>
+		<chaser>Mladen</chaser>
+	</game>
+	<game>
+		<username>user1</username>
+		<score>3500</score>
+		<offer>srednja</offer>
+		<chaser>Mladen</chaser>
+	</game>
+	<game><username>admin</username><score>8750</score><chaser>Krešimir</chaser><offer>visa</offer></game></games>

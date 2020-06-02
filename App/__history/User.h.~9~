@@ -1,0 +1,28 @@
+//---------------------------------------------------------------------------
+
+#ifndef UserH
+#define UserH
+
+#include <vcl.h>
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+//---------------------------------------------------------------------------
+#endif
+
+class user{
+public:
+
+	static UnicodeString user_username = "0";
+	static int user_bank;
+	static int user_br_tocnih;
+	static bool user_loged;
+
+
+};
+
+ UnicodeString user::user_username = "0";
+int user::user_bank = 0;
+int user::user_br_tocnih = 0;
+bool user::user_loged = false;

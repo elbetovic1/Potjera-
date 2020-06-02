@@ -1,0 +1,61 @@
+//---------------------------------------------------------------------------
+
+#ifndef InfoH
+#define InfoH
+
+#include <vcl.h>
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <stdlib.h>
+#include <time.h>
+
+#include "Potjera.h"
+using namespace std;
+
+//---------------------------------------------------------------------------
+#endif
+
+class korisnik{
+public:
+	static UnicodeString ime;
+	static bool ulogiran;
+	static int score;
+
+};
+UnicodeString korisnik::ime = "0";
+bool korisnik::ulogiran = false;
+int korisnik::score = 0;
+
+class lovac{
+public:
+
+	static UnicodeString ime;
+	static int odgovor;
+	static int vrijeme_za_odgovor;
+	static int tocnost;
+
+
+};
+
+UnicodeString lovac::ime = "0";
+int lovac::odgovor = 0;
+int lovac::vrijeme_za_odgovor = 0;
+int lovac::tocnost = 0;
+
+
+class pitanje_{
+public:
+
+	static UnicodeString pitanje;
+	static UnicodeString odgovor1;
+	static UnicodeString odgovor2;
+	static UnicodeString odgovor3;
+
+};
+UnicodeString lovac::pitanje = "0";
+UnicodeString lovac::odgovor1 = "0";
+UnicodeString lovac::odgovor2 = "0";
+UnicodeString lovac::odgovor3 = "0";
+

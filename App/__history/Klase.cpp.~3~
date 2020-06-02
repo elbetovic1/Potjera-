@@ -1,0 +1,16 @@
+
+#include <string>
+#include <iostream>
+
+
+class pitanje{
+
+public:
+
+	UnicodeString pitanje = "abc";
+	UnicodeString odg1;
+	UnicodeString odg2;
+	UnicodeString odg3;
+	int tocan;
+
+};

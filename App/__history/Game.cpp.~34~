@@ -1,0 +1,51 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Game.h"
+
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+
+void questions::create_questions(int n){
+
+
+	for(int i = 0; i < n; i++){
+		question_nos.push_back(i);
+	}
+
+	random_shuffle(question_nos.begin(), question_nos.end());
+
+}
+
+void game_start(questions q, _di_IXMLpitanjaType pitanja){
+
+	q.counter = 0;
+
+	_di_IXMLpitanjeType pitanje = pitanja->Get_pitanje(q.question_nos[q.counter]);
+
+	Form2->Edit1->Text = pitanje->Get_pit();
+	Form2->Button2->Caption = "A) " + pitanje->Get_odg1();
+	Form2->Button3->Caption = "B) " + pitanje->Get_odg2();
+	Form2->Button4->Caption = "C) " + pitanje->Get_odg3();
+
+	int right_answer;
+
+	right_answer = pitanje->Get_tocan();
+
+	Form2->Timer1->Enabled = true;
+
+	while(questions::time < 5){
+	if(q.answer == right_answer){
+	ShowMessage("Tocno");
+	q.answer = 0;
+	}
+
+	}
+
+
+};
+
+
+

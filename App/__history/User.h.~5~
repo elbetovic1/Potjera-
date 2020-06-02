@@ -1,0 +1,22 @@
+//---------------------------------------------------------------------------
+
+#ifndef UserH
+#define UserH
+
+//---------------------------------------------------------------------------
+#endif
+
+class user{
+public:
+	static UnicodeString username = "0";
+	static int bank;
+	static int br_tocnih;
+	static bool loged;
+
+
+};
+
+UnicodeString user::username = "0";
+int user::bank = 0;
+int user::br_tocnih = 0;
+bool user::loged = false;

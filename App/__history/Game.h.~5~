@@ -1,0 +1,20 @@
+//---------------------------------------------------------------------------
+
+#ifndef GameH
+#define GameH
+#include <vcl.h>
+#include "pitanja.h"
+#include "Igra.h"
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+//---------------------------------------------------------------------------
+#endif
+
+
+
+void create_questions(_di_IXMLpitanjaType pitanja);

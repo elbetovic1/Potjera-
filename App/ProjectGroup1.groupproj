@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{4CC1B8D0-FAA6-4835-B0D3-AD825CD5C133}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PotjeraApp.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Dll\Forme.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Lib\Operacije.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PotjeraApp">
+        <MSBuild Projects="PotjeraApp.cbproj"/>
+    </Target>
+    <Target Name="PotjeraApp:Clean">
+        <MSBuild Projects="PotjeraApp.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PotjeraApp:Make">
+        <MSBuild Projects="PotjeraApp.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Forme">
+        <MSBuild Projects="..\Dll\Forme.cbproj"/>
+    </Target>
+    <Target Name="Forme:Clean">
+        <MSBuild Projects="..\Dll\Forme.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Forme:Make">
+        <MSBuild Projects="..\Dll\Forme.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Operacije">
+        <MSBuild Projects="..\Lib\Operacije.cbproj"/>
+    </Target>
+    <Target Name="Operacije:Clean">
+        <MSBuild Projects="..\Lib\Operacije.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Operacije:Make">
+        <MSBuild Projects="..\Lib\Operacije.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PotjeraApp;Forme;Operacije"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PotjeraApp:Clean;Forme:Clean;Operacije:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PotjeraApp:Make;Forme:Make;Operacije:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

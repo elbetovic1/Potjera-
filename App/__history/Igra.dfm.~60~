@@ -1,0 +1,191 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'The Chase'
+  ClientHeight = 500
+  ClientWidth = 913
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 88
+    Top = 80
+    Width = 457
+    Height = 39
+    AutoSize = False
+    Caption = 'Score: '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -32
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 551
+    Top = 80
+    Width = 190
+    Height = 39
+    AutoSize = False
+    Caption = 'Time:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -32
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object B_Start: TButton
+    Left = 0
+    Top = 418
+    Width = 912
+    Height = 75
+    Align = alCustom
+    Caption = 'Start'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    OnClick = B_StartClick
+  end
+  object Edit1: TEdit
+    Left = 0
+    Top = 168
+    Width = 912
+    Height = 82
+    Alignment = taCenter
+    AutoSelect = False
+    AutoSize = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 1
+    Visible = False
+  end
+  object Button1: TButton
+    Left = 0
+    Top = 256
+    Width = 300
+    Height = 75
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+    Visible = False
+    WordWrap = True
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 306
+    Top = 256
+    Width = 300
+    Height = 75
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+    Visible = False
+    WordWrap = True
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 612
+    Top = 256
+    Width = 300
+    Height = 75
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 4
+    TabStop = False
+    Visible = False
+    OnClick = Button3Click
+  end
+  object B_Next: TButton
+    Left = 306
+    Top = 337
+    Width = 300
+    Height = 75
+    Caption = 'Next Question'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 5
+    Visible = False
+    WordWrap = True
+    OnClick = B_NextClick
+  end
+  object B_Continue: TButton
+    Left = 612
+    Top = 337
+    Width = 300
+    Height = 75
+    Caption = 'Face The Chaser'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 6
+    Visible = False
+    WordWrap = True
+    OnClick = B_ContinueClick
+  end
+  object B_TryAgain: TButton
+    Left = 0
+    Top = 337
+    Width = 300
+    Height = 75
+    Caption = 'Try Again'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 7
+    Visible = False
+    WordWrap = True
+    OnClick = B_TryAgainClick
+  end
+  object XMLDocument1: TXMLDocument
+    Active = True
+    FileName = 'C:\Users\elbet\Desktop\Projekt\App\pitanja.xml'
+    Left = 368
+    Top = 15
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    Left = 416
+    Top = 16
+  end
+end

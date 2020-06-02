@@ -1,0 +1,24 @@
+
+#include <string>
+#include <iostream>
+#include <vcl.h>
+#pragma hdrstop
+#include <tchar.h>
+#include "NovoPitanje.h"
+#include "EditPitanja.h"
+#include "Login.h"
+#include "Klasa.h"
+#include "pitanja.h"
+#include "Reg.h"
+
+class pitanje{
+
+public:
+
+	UnicodeString pitanje;
+	UnicodeString odg1;
+	UnicodeString odg2;
+	UnicodeString odg3;
+	int tocan;
+
+};

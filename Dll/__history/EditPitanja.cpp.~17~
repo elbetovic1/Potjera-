@@ -1,0 +1,144 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "EditPitanja.h"
+#include "pitanja.h"
+#include "operacijePitanja.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TF_EditPitanje *F_EditPitanje;
+//---------------------------------------------------------------------------
+__fastcall TF_EditPitanje::TF_EditPitanje(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TF_EditPitanje::Button1Click(TObject *Sender)
+{
+	_di_IXMLpitanjaType pitanja = Getpitanja(XMLDocument1);
+	_di_IXMLpitanjeType pitanje = pitanja->Get_pitanje(ListView1->ItemIndex);
+
+	Edit1->Text = pitanje->Get_pit();
+	Edit2->Text = pitanje->Get_odg1();
+	Edit3->Text = pitanje->Get_odg1();
+	Edit4->Text = pitanje->Get_odg1();
+
+	if(pitanje->Get_tocan() == 1)
+	{
+		RadioButton1->Checked = 1;
+	}
+	if(pitanje->Get_tocan() == 2)
+	{
+		RadioButton2->Checked = 2;
+	}
+	if(pitanje->Get_tocan() == 3)
+	{
+		RadioButton3->Checked = 3;
+	}
+
+
+}
+
+//---------------------------------------------------------------------------
+void __fastcall TF_EditPitanje::Button2Click(TObject *Sender)
+{
+	_di_IXMLpitanjaType pitanja = Getpitanja(XMLDocument1);
+	ListView1->Items->Clear();
+
+	for(int i = 0; i<pitanja->Count;i++){
+		ListView1->Items->Add();
+		ListView1->Items->Item[i]->Caption = pitanja->pitanje[i]->Get_pit();
+		ListView1->Items->Item[i]->SubItems->Add(pitanja->pitanje[i]->Get_odg1());
+		ListView1->Items->Item[i]->SubItems->Add(pitanja->pitanje[i]->Get_odg2());
+		ListView1->Items->Item[i]->SubItems->Add(pitanja->pitanje[i]->Get_odg3());
+
+	}
+
+
+
+}
+//---------------------------------------------------------------------------
+void __fastcall TF_EditPitanje::Button4Click(TObject *Sender)
+{
+		if(Edit1->GetTextLen() != 0 &&  Edit2->GetTextLen() != 0 && Edit3->GetTextLen() != 0 && Edit4->GetTextLen() != 0){
+
+
+		if(RadioButton1->Checked){
+			_di_IXMLpitanjaType pitanja = Getpitanja(XMLDocument1);
+			_di_IXMLpitanjeType pitanje = pitanja->Get_pitanje(ListView1->ItemIndex);
+
+			pitanje->Set_tocan(1);
+			pitanje->Set_pit(Edit1->Text);
+			pitanje->Set_odg1(Edit2->Text);
+			pitanje->Set_odg2(Edit3->Text);
+			pitanje->Set_odg3(Edit4->Text);
+
+			XMLDocument1->SaveToFile(XMLDocument1->FileName);
+			ShowMessage("You succesfully edited a question");
+
+            Edit1->Clear();
+			Edit2->Clear();
+			Edit3->Clear();
+			Edit4->Clear();
+		}
+		else if (RadioButton2->Checked) {
+			_di_IXMLpitanjaType pitanja = Getpitanja(XMLDocument1);
+			_di_IXMLpitanjeType pitanje = pitanja->Get_pitanje(ListView1->ItemIndex);
+
+			pitanje->Set_tocan(2);
+			pitanje->Set_pit(Edit1->Text);
+			pitanje->Set_odg1(Edit2->Text);
+			pitanje->Set_odg2(Edit3->Text);
+			pitanje->Set_odg3(Edit4->Text);
+
+			XMLDocument1->SaveToFile(XMLDocument1->FileName);
+			ShowMessage("You succesfully edited a question");
+
+			Edit1->Clear();
+			Edit2->Clear();
+			Edit3->Clear();
+			Edit4->Clear();
+
+		}
+		else if (RadioButton3->Checked) {
+			_di_IXMLpitanjaType pitanja = Getpitanja(XMLDocument1);
+			_di_IXMLpitanjeType pitanje = pitanja->Get_pitanje(ListView1->ItemIndex);
+
+			pitanje->Set_tocan(3);
+			pitanje->Set_pit(Edit1->Text);
+			pitanje->Set_odg1(Edit2->Text);
+			pitanje->Set_odg2(Edit3->Text);
+			pitanje->Set_odg3(Edit4->Text);
+
+			XMLDocument1->SaveToFile(XMLDocument1->FileName);
+			ShowMessage("You succesfully edited a question");
+
+            Edit1->Clear();
+			Edit2->Clear();
+			Edit3->Clear();
+			Edit4->Clear();
+		}
+		else{
+			ShowMessage("One answer must be selected as the right answer");
+		}
+
+
+
+	}
+
+	else{
+		ShowMessage("All the fields must be filled");
+	}
+}
+//---------------------------------------------------------------------------
+void __fastcall TF_EditPitanje::Button3Click(TObject *Sender)
+{
+	_di_IXMLpitanjaType pitanja = Getpitanja(XMLDocument1);
+
+
+}
+//---------------------------------------------------------------------------
+

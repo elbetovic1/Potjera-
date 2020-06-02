@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xdb="http://www.borland.com/schemas/delphi/10.0/XMLDataBinding">
+	<xs:element name="games" type="gamesType"/>
+	<xs:complexType name="gamesType"><xs:annotation>
+			<xs:appinfo xdb:docElement="games"/>
+		</xs:annotation>
+		<sequence xmlns="http://www.w3.org/2001/XMLSchema">
+			<xs:element name="game" type="gameType" maxOccurs="unbounded"/>
+		</sequence>
+	</xs:complexType>
+	<xs:complexType name="gameType">
+		<xs:annotation>
+			<xs:appinfo xdb:repeated="True"/>
+		</xs:annotation>
+		<sequence xmlns="http://www.w3.org/2001/XMLSchema">
+			<xs:element name="username" type="xs:string"/>
+			<xs:element name="score" type="xs:integer"/>
+			<xs:element name="offer" type="xs:string"/>
+			<xs:element name="chaser" type="xs:string"/>
+		</sequence>
+	</xs:complexType>
+</xs:schema>

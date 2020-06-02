@@ -1,0 +1,16 @@
+
+#include <string>
+#include <iostream>
+#pragma hdrstop
+
+class pitanje{
+
+public:
+
+	UnicodeString pitanje;
+	UnicodeString odg1;
+	UnicodeString odg2;
+	UnicodeString odg3;
+	int tocan;
+
+};

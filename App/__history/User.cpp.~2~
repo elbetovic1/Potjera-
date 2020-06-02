@@ -1,0 +1,12 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "User.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+UnicodeString user::user_username = "0";
+int user::user_bank = 0;
+int user::user_br_tocnih = 0;
+bool user::user_loged = false;

@@ -1,0 +1,18 @@
+
+#include <string>
+#include <iostream>
+#include <vcl.h>
+#pragma hdrstop
+#include <tchar.h>
+
+class pitanje{
+
+public:
+
+	UnicodeString pitanje;
+	UnicodeString odg1;
+	UnicodeString odg2;
+	UnicodeString odg3;
+	int tocan;
+
+};

@@ -1,0 +1,49 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Reg.h"
+#include "operacijeUser.h"
+#include <idhashmessagedigest.hpp>
+#include <idhashsha.hpp>
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TF_Reg *F_Reg;
+//---------------------------------------------------------------------------
+__fastcall TF_Reg::TF_Reg(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TF_Reg::Button2Click(TObject *Sender)
+{
+	 F_Reg->Close();
+}
+//---------------------------------------------------------------------------
+void __fastcall TF_Reg::Button1Click(TObject *Sender)
+{
+	TIdHashSHA1* sha1 = new TIdHashSHA1;
+
+	if(userExists(T_User, E_Username->Text)){
+		ShowMessage("Username taken");
+		delete sha1;
+	}
+	else if(E_Password->Text == E_Password2->Text){
+			 T_User->Append();
+             T_User->FieldByName("ID")->AsInteger = T_User->RecordCount + 1;
+			 T_User->FieldByName("Username")->AsString = E_Username->Text;
+			 T_User->FieldByName("Password")->AsString = sha1->HashStringAsHex(E_Password->Text);
+			 T_User->Post();
+             ShowMessage("You registered succesfully, please login to play");
+			 delete sha1;
+
+	}
+	else{
+		ShowMessage("Passwords dont match");
+		delete sha1;
+    }
+
+}
+//---------------------------------------------------------------------------

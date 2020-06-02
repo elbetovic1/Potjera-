@@ -1,0 +1,15 @@
+//---------------------------------------------------------------------------
+
+#ifndef operacijePitanjaH
+#define operacijePitanjaH
+#include <vcl.h>
+#include "pitanja.h"
+
+using namespace std;
+//---------------------------------------------------------------------------
+#endif
+
+
+void refreshPitanja(_di_IXMLpitanjaType pitanja);
+void addPitanja(_di_IXMLpitanjaType pitanja);
+void deletePitanje(_di_IXMLpitanjaType pitanja);

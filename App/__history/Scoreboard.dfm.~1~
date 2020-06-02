@@ -1,0 +1,53 @@
+object Form6: TForm6
+  Left = 0
+  Top = 0
+  Caption = 'Scoreboard'
+  ClientHeight = 492
+  ClientWidth = 496
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 24
+    Width = 172
+    Height = 39
+    Caption = 'Scoreboard:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -32
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object ListView1: TListView
+    Left = 8
+    Top = 80
+    Width = 480
+    Height = 404
+    Columns = <
+      item
+        AutoSize = True
+        Caption = 'Username'
+      end
+      item
+        AutoSize = True
+        Caption = 'Score'
+      end
+      item
+        AutoSize = True
+        Caption = 'Offer'
+      end
+      item
+        Caption = 'Chaser'
+      end>
+    TabOrder = 0
+    ViewStyle = vsReport
+  end
+end
